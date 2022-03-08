@@ -33,13 +33,17 @@ body {
   text-decoration: none;
 }
 
-/*FILTROS*/
-.filterMovies {
+/*FILTROS FILMES*/
+.filterMovies, .filterCharacter {
   display: flex;
   justify-content: space-around;
 }
 
-.searchTitle {
+.searchTitle,
+ .searchPeople,
+ .sortAlfa,
+.director,
+.genderPerson {
   border-radius: 8em;
   padding: 0.8em;
   text-align: center;
@@ -56,21 +60,7 @@ body {
   border: 2px solid black;
 }
 
-.sortAlfa {
-  border-radius: 8em;
-  padding: 0.8em;
-  text-align: center;
-  border: solid 2px;
-}
-
-.director {
-  border-radius: 8em;
-  padding: 0.8em;
-  text-align: center;
-  border: solid 2px;
-}
-
-/*POSTER*/
+/*POSTER FILMES*/
 .cards {
   display: flex;
   width: 98%;
@@ -88,11 +78,23 @@ body {
   background-color:	#731F35;
 }
 
-.title-card {
+.title-card, .name-card {
   font-size: 0.9em;
   text-align:center;
   padding:0.8em;
   color:white;
+}
+
+/*CARDS PERSONAGENS*/
+.cardsCharacter {
+display: flex;
+width: 98%;
+justify-content: space-around;
+flex-wrap: wrap;
+flex-direction: row;
+margin-top: 3em;
+grid-gap: 5em;
+padding: 2em;
 }
 
 /*FOOTER*/

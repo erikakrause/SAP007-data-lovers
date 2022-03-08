@@ -1,7 +1,8 @@
 import {searchName, filterSort, directorFilter }from './data.js'
 import data from './data/ghibli/ghibli.js';
 
-const films =data.films;
+const films = data.films;
+
 
 //MOSTRAR FILMES NA TELA
 function showFilms(data){
@@ -29,7 +30,6 @@ const clear = document.getElementById('btnClear').addEventListener('click', clea
 title.addEventListener('keyup', ( ) => {
   const typedTitle = document.querySelector('#searchTitle').value;
   console.log(document.querySelector('#searchTitle').value);
-
     const selectedMovie = searchName(films, typedTitle);
     console.log(selectedMovie);
 
