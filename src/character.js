@@ -7,7 +7,7 @@ const films = data.films;
 const namePerson= document.getElementById('searchPeople');
 const peopleSortAz = document.getElementById('sortAlfa'); 
 const gender = document.getElementById('genderPerson');
-//const clear = document.getElementById('btnClear').addEventListener('click', cleanFilters);
+const clear = document.getElementById('btnClear').addEventListener('click', cleanFiltersChar);
 //const calculator = document.getElementById('addedValue')
 
 
@@ -54,7 +54,8 @@ showCharacter(selectedGender);
 });
 
 //IMPAR CAMPOS PARA RECOMEÇAR A PESQUISA
- function cleanFilters () {
+ function cleanFiltersChar () {
+  showCharacter(arrCharacters) = "";
    namePerson.value ="";
    peopleSortAz.value ="";
    gender.value ="";
