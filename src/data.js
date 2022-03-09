@@ -22,9 +22,8 @@ export const directorFilter = (animation, selectedValue) => {
 
 //FILTRO POR NOME DO PERSONAGEM
 
-export const searchCharacter = (data, animantion) => 
-data.filter(item => item.name.toUpperCase().includes(animantion.toUpperCase()))
-console.log(searchCharacter);
+export const searchCharacter = (character, characterSelected) => 
+character.filter(films => films.name.toUpperCase().includes(characterSelected.toUpperCase()));
 
 // FILTRO ORDEM ALFABÉTICA PERSONAGEM
 export const filterSortPeople = (data, name) => {

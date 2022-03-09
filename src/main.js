@@ -23,7 +23,7 @@ showFilms(data.films);
 const sortAz = document.getElementById('sortAlfa');  
 const title = document.getElementById('searchTitle');
 const directorSelect = document.getElementById('director');
-const clear = document.getElementById('btnClear').addEventListener('click', cleanFilters);
+//const clear = document.getElementById('btnClear').addEventListener('click', cleanFilters);
 //const calculator = document.getElementById('addedValue')
 
 //BUSCAR PELO TÍTULO DO FILME
