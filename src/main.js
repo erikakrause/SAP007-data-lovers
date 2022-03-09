@@ -1,4 +1,4 @@
-import {searchName, filterSort, directorFilter }from './data.js'
+import {searchName, filterSort, directorFilter, calculator }from './data.js'
 import data from './data/ghibli/ghibli.js';
 
 const films = data.films;
@@ -58,7 +58,7 @@ directorSelect.addEventListener('change', (event) => {
 showFilms(selectedFilmDirector);
 });
 
-//IMPAR CAMPOS PARA RECOMEÇAR A PESQUISA
+//LIMPAR CAMPOS PARA RECOMEÇAR A PESQUISA
  function cleanFilters () {
    title.value ="";
    sortAz.value ="";
