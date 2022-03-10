@@ -3,7 +3,6 @@ import data from './data/ghibli/ghibli.js';
 
 const films = data.films;
 
-
 //MOSTRAR FILMES NA TELA
 /*   <div class="back-card">
       <p class="name-director">${item.director}</p>
@@ -81,3 +80,8 @@ showFilms(selectedFilmDirector);
    sortAz.value ="";
    directorSelect.value ="";
  }
+
+ //CALCULO 
+const addValue = films.map(item => item.director);
+const scoreFilm = addValue.map(element => parseInt(element))
+document.querySelector('#calculator').innerHTML = calculator(scoreFilm);

@@ -45,8 +45,11 @@ export const genderFilter = (animation, selectedValue) => {
   return animation.filter(films => films.gender.includes(selectedValue));
 }  
 
-// PORCENTAGEM POR
-export const calculator = (value1, percentageItem) => {
-  const percentage = Math.round((percentageItem * 100) / value1);
-  return percentage;
+// PORCENTAGEM 
+export const calculator = (numberScore) => {
+  const percentage = numberScore.reduce((aac, item) => {
+    acc = acc + item;
+    return percentage;
+  },0);
+  return percentage/numberScore.length
 }
