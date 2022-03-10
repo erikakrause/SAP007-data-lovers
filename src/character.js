@@ -1,7 +1,15 @@
-import {searchCharacter, filterSortPeople, genderFilter}from './data.js'
+import { searchCharacter, filterSortPeople, genderFilter }from './data.js'
 import data from './data/ghibli/ghibli.js';
 
 const films = data.films;
+
+/*SELETORES*/
+const namePerson= document.getElementById('searchPeople');
+const peopleSortAz = document.getElementById('sortAlfa'); 
+const gender = document.getElementById('genderPerson');
+const clear = document.getElementById('btnClear').addEventListener('click', cleanFiltersChar);
+//const calculator = document.getElementById('addedValue')
+
 
  //MOSTRAR PERSONAGEM NA TELA 
   const peopleImage = document.getElementById('cardsCharacter');
@@ -21,25 +29,14 @@ const arrCharacters = [].concat.apply([], characters);
 
 showCharacter(arrCharacters);
 
-/*SELETORES*/
-const namePerson= document.getElementById('nameCharacter');
-const peopleSortAz = document.getElementById('sortAlfa'); 
-const gender = document.getElementById('genderPerson')
-const clear = document.getElementById('btnClear').addEventListener('click', cleanFilters);
-//const calculator = document.getElementById('addedValue')
-
 //BUSCAR PELO NOME DO PERSONAGEM 
-/*
-nameCharacter.addEventListener('keyup', ( ) => {
-  const typedName = document.querySelector('#searchPeople').value;
-  console.log(document.querySelector('#searchPeople').value);
-
-    const selectedCharacter = searchCharacter(people, typedName);
-    console.log(selectedCharacter);
-
- showCharacter(selectedCharacter);
-});*/
-
+  const filterName = () => {
+    const typedName = namePerson.value
+     const selectedCharacter = searchCharacter(arrCharacters, typedName);
+    
+    showCharacter(selectedCharacter);
+  };
+  
 //BUSCAR POR ORDEM ALFÁBETICA
 peopleSortAz.addEventListener('change',(event) => {
   const sortSelectPerson = event.target.value;
@@ -57,8 +54,11 @@ showCharacter(selectedGender);
 });
 
 //IMPAR CAMPOS PARA RECOMEÇAR A PESQUISA
- function cleanFilters () {
+ function cleanFiltersChar () {
+  showCharacter(arrCharacters) = "";
    namePerson.value ="";
    peopleSortAz.value ="";
    gender.value ="";
  }
+
+ namePerson.addEventListener('keypress', filterName);

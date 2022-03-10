@@ -1,17 +1,24 @@
-import  {searchName, filterSort, directorFilter, calculator }from './data.js'
+import {searchName, filterSort, directorFilter, movieRelease , calculator }from './data.js'
 import data from './data/ghibli/ghibli.js';
 
 const films = data.films;
 
 //MOSTRAR FILMES NA TELA
+/*   <div class="back-card">
+      <p class="name-director">${item.director}</p>
+      <p class="name-producer">${item.producer}</p>
+      <p class="title-card">${item.release_date}</p>
+      <p class="title-card">${item.rt_score}</p>
+    <div>
+    </</div>*/
 function showFilms(data){
   document.getElementById('cards').innerHTML = data.map((item) => `
 
   <div class="card">
     <div class="flip-card">
-    <p class="title-card"><strong>${item.title}</strong></p>
+      <p class="title-card"><strong>${item.title}</strong></p>
       <img  class='img-card' src='${item.poster}'alt="poster filmes"> 
-    </div>
+      </div>
   </div>
 `).join('');  
 }
@@ -21,6 +28,7 @@ showFilms(data.films);
 //SELETORES
 const sortAz = document.getElementById('sortAlfa');  
 const title = document.getElementById('searchTitle');
+const movieDate = document.getElementById('releaseDate');
 const directorSelect = document.getElementById('director');
 const clear = document.getElementById('btnClear').addEventListener('click', cleanFilters);
 //const calculator = document.getElementById('addedValue')
@@ -45,6 +53,14 @@ sortAz.addEventListener('change',(event)=> {
  
 showFilms(titleAz);
 });
+// MOSTRAR FILMES POR DATA
+movieDate.addEventListener('change',(event)=> {
+  const dateSelected = event.target.value;
+
+  const selectedFilmDate = movieRelease(films, dateSelected);
+  showFilms(selectedFilmDate);
+
+})
 
 //MOSTRAR FILMES POR DIRETOR
 directorSelect.addEventListener('change', (event) => {
@@ -57,9 +73,9 @@ directorSelect.addEventListener('change', (event) => {
 showFilms(selectedFilmDirector);
 });
 
-
 //LIMPAR CAMPOS PARA RECOMEÇAR A PESQUISA
  function cleanFilters () {
+   showFilms(data.films) = "";
    title.value ="";
    sortAz.value ="";
    directorSelect.value ="";

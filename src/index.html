@@ -16,13 +16,13 @@
 <body>
   <header>
     <div>
-      <img class="banner" src="img/the_secret_world_of_arrietty.jpg" alt="">
-    </div>
-    <div>
+      <img class="logo" src="img/studio_ghibli_logo.png" alt="Logo Studios Ghibli">
       <nav class="menu" id="menu">
         <ul>
           <li><a class="link" href="home.html">Início</a></li>
-          <li><a class="link" href="personagens.html">Personagens</a></li>
+          <li><a class="link" href="character.html">Personagens</a></li>
+          <li><a class="link" href="https://www.ghibli.jp/" target="_blank">Página Oficial</a></li>
+
         </ul>
       </nav>
     </div>
@@ -41,6 +41,29 @@
         </select>
       </div>
       <div>
+        <select id="releaseDate" class="releaseDate">
+          <option value disabled selected>Ano de Lançamento</option>
+          <option value="1988">1988</option>
+          <option value="1989">1989</option>
+          <option value="1919">1991</option>
+          <option value="1992">1992</option>
+          <option value="1994">1994</option>
+          <option value="1995">1995</option>
+          <option value="1997">1997</option>
+          <option value="1999">1999</option>
+          <option value="2001">2001</option>
+          <option value="2002">2002</option>
+          <option value="2004">2004</option>
+          <option value="2006">2006</option>
+          <option value="2008">2008</option>
+          <option value="2010">2010</option>
+          <option value="2011">2011</option>
+          <option value="2012">2012</option>
+          <option value="2013">2013</option>
+          <option value="2014">2014</option>
+        </select>
+      </div>
+      <div>
         <select id="director" class="director">
           <option value disabled selected> Diretor</option>
           <option value="Hayao Miyazaki">Hayao Miyazaki</option>
@@ -55,9 +78,9 @@
         <button class="btnClear" id="btnClear" type="">Limpar</button>
       </div>
     </section>
-    <section class="addedValue">
-      <p id="calculator"></p>
-    </section>
+    <div class="addedValue">
+      <p id="calculatorDirector"></p>
+    </div>
     <div class="cards" id="cards"></div>
   </main>
   <footer>

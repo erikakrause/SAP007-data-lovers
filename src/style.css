@@ -9,11 +9,16 @@
 body {
   background-color: #BF9A78;
   justify-content: center;
-  width: 100vw;
+  width: 98vw;
   height: 100vh;
   font-family: Poppins;
 }
 /*MENU*/
+.logo {
+  display: block;
+  padding: 1em;
+  width: 15em;
+}
 
 .menu, li {
   display: inline;
@@ -22,10 +27,6 @@ body {
   font-size: 1.1em;
 }
 
-.banner {
-  width: 100vw;
-  height: 35vh;
-}
 .link {
   color: white;
   font-weight: bold;
@@ -36,12 +37,16 @@ body {
 /*FILTROS FILMES*/
 .filterMovies, .filterCharacter {
   display: flex;
+  padding: 0.9em;
+  border-radius: 0.8em;
   justify-content: space-around;
+  background-color: #731F35;
 }
 
 .searchTitle,
  .searchPeople,
  .sortAlfa,
+ .releaseDate,
 .director,
 .genderPerson {
   border-radius: 8em;
@@ -52,7 +57,7 @@ body {
 
 .searchButton,
 .btnClear {
-  background-color: #731F35;
+  background-color: #4F731A;
   width: 9em;
   height: 3em;
   color: white;
