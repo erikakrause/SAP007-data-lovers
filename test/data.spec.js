@@ -1,4 +1,5 @@
-import { example, anotherExample } from '../src/data.js';
+import { searchName, filterSort, movieRelease, directorFilm,
+searchCharacter, filterSortPeople, genderFilter, calculator  } from '../src/data.js';
 
 
 describe('example', () => {
