@@ -6,11 +6,12 @@ console.log(searchName);
 
 //FILTRO PARA BUSCAR O FILME POR ORDEM ALFABÉTICA
 export const filterSort = (data, title) => {
+  const newArrFilms = [...data]
   console.log(title);
   if(title === "a-z") {
-    return data.sort((a, b) => (a.title > b.title ? 1 : -1));
+    return newArrFilms.sort((a, b) => (a.title > b.title ? 1 : -1));
 } else {
-  return data.sort((a, b) => (a.title > b.title ? -1 : 1));
+  return newArrFilms.sort((a, b) => (a.title > b.title ? -1 : 1));
   }
 }
 
@@ -32,11 +33,12 @@ character.filter(films => films.name.toUpperCase().includes(characterSelected.to
 
 // FILTRO ORDEM ALFABÉTICA PERSONAGEM
 export const filterSortPeople = (data, name) => {
+  const newArrChar = [...data]
   console.log(name);
   if(name === "a-z") {
-    return data.sort((a, b) => (a.name > b.name ? 1 : -1));
+    return newArrChar.sort((a, b) => (a.name > b.name ? 1 : -1));
 } else {
-  return data.sort((a, b) => (a.name > b.name ? -1 : 1));
+  return newArrChar.sort((a, b) => (a.name > b.name ? -1 : 1));
   }
 }
 
@@ -46,10 +48,12 @@ export const genderFilter = (animation, selectedValue) => {
 }  
 
 // PORCENTAGEM 
-export const calculator = (numberScore) => {
-  const percentage = numberScore.reduce((aac, item) => {
+export const calculator = (filterArrFilm, data) => {
+  return filterArrFilm.length * 100/data.length;
+  
+ /* const percentage = numbersFilms.reduce((acc, item) => {
     acc = acc + item;
     return percentage;
-  },0);
-  return percentage/numberScore.length
+      return percentage/numbersFilms.length;
+  });*/
 }

@@ -30,8 +30,7 @@ const sortAz = document.getElementById('sortAlfa');
 const title = document.getElementById('searchTitle');
 const movieDate = document.getElementById('releaseDate');
 const directorSelect = document.getElementById('director');
-const clear = document.getElementById('btnClear').addEventListener('click', cleanFilters);
-//const calculator = document.getElementById('addedValue')
+document.getElementById('btnClear').addEventListener('click', cleanFilters);
 
 //BUSCAR PELO TÍTULO DO FILME
 title.addEventListener('keyup', ( ) => {
@@ -53,6 +52,7 @@ sortAz.addEventListener('change',(event)=> {
  
 showFilms(titleAz);
 });
+
 // MOSTRAR FILMES POR DATA
 movieDate.addEventListener('change',(event)=> {
   const dateSelected = event.target.value;
@@ -70,18 +70,16 @@ directorSelect.addEventListener('change', (event) => {
   const selectedFilmDirector = directorFilter(films, optionSelected);
   console.log(selectedFilmDirector);
 
+  console.log(calculator(selectedFilmDirector, films))
 showFilms(selectedFilmDirector);
 });
 
 //LIMPAR CAMPOS PARA RECOMEÇAR A PESQUISA
  function cleanFilters () {
-   showFilms(data.films) = "";
+   showFilms(data.films);
    title.value ="";
    sortAz.value ="";
    directorSelect.value ="";
  }
 
  //CALCULO 
-const addValue = films.map(item => item.director);
-const scoreFilm = addValue.map(element => parseInt(element))
-document.querySelector('#calculator').innerHTML = calculator(scoreFilm);
