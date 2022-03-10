@@ -1,9 +1,7 @@
-import {searchName, filterSort, directorFilter, calculator}from './data.js'
+import  {searchName, filterSort, directorFilter, calculator }from './data.js'
 import data from './data/ghibli/ghibli.js';
 
 const films = data.films;
-
-console.log(calculator(data));
 
 //MOSTRAR FILMES NA TELA
 function showFilms(data){
@@ -59,9 +57,15 @@ directorSelect.addEventListener('change', (event) => {
 showFilms(selectedFilmDirector);
 });
 
-//IMPAR CAMPOS PARA RECOMEÇAR A PESQUISA
+
+//LIMPAR CAMPOS PARA RECOMEÇAR A PESQUISA
  function cleanFilters () {
    title.value ="";
    sortAz.value ="";
    directorSelect.value ="";
  }
+
+ //CALCULO 
+const addValue = films.map(item => item.director);
+const scoreFilm = addValue.map(element => parseInt(element))
+document.querySelector('#calculator').innerHTML = calculator(scoreFilm);
