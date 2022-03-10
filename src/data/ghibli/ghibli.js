@@ -296,7 +296,7 @@ export default {
         {
           "id": "c491755a-407d-4d6e-b58a-240ec78b5061",
           "name": "Chibi Totoro",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/c/c5/Little_Totoro_spirit_moving.gif",
+          "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQF3nOCiZ9BGiwe4qLBJRquMj5YGYmFPkbfmQ&usqp=CAU",
           "gender": "NA",
           "age": "",
           "eye_color": "Black",
