@@ -1,8 +1,9 @@
-import {searchName, filterSort, directorFilter }from './data.js'
+import {searchName, filterSort, directorFilter, calculator}from './data.js'
 import data from './data/ghibli/ghibli.js';
 
 const films = data.films;
 
+console.log(calculator(data));
 
 //MOSTRAR FILMES NA TELA
 function showFilms(data){
