@@ -60,7 +60,7 @@ movieDate.addEventListener('change',(event)=> {
   const selectedFilmDate = movieRelease(films, dateSelected);
   showFilms(selectedFilmDate);
 
-})
+});
 
 //MOSTRAR FILMES POR DIRETOR
 directorSelect.addEventListener('change', (event) => {
@@ -79,7 +79,6 @@ showFilms(selectedFilmDirector);
    showFilms(data.films);
    title.value ="";
    sortAz.value ="";
+   movieDate.value = "";
    directorSelect.value ="";
- }
-
- //CALCULO 
+ };
