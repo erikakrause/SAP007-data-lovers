@@ -14,12 +14,17 @@ export const filterSort = (data, title) => {
   }
 }
 
+//FILTRO ANO DE LANÇAMENTO FILME
+export const movieRelease = (animation, selectedValue) => {
+  return animation.filter(films => films.release_date.includes(selectedValue));
+}
+
 //FILTRO DE SELECIONAR O TÍTULO POR DIRETOR
 export const directorFilter = (animation, selectedValue) => {
   return animation.filter(films => films.director.includes(selectedValue));
 }  
 
-
+//////////////////////PERSONAGENS////////////////////
 //FILTRO POR NOME DO PERSONAGEM
 
 export const searchCharacter = (character, characterSelected) => 
