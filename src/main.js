@@ -57,6 +57,7 @@ movieDate.addEventListener('change',(event)=> {
 directorSelect.addEventListener('change', (event) => {
   const optionSelected = event.target.value;
     const selectedFilmDirector = directorFilter(films, optionSelected);
+    return calculator(selectedFilmDirector, films);
   //console.log(calculator(selectedFilmDirector, films))
 showFilms(selectedFilmDirector);
 });

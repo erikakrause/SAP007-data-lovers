@@ -1,13 +1,11 @@
 import { searchCharacter, filterSortPeople, genderFilter, calculator }from './data.js'
 import data from './data/ghibli/ghibli.js';
 
-const films = data.films;
-
 //////*SELETORES*/////
 const namePerson= document.getElementById('searchPeople');
 const peopleSortAz = document.getElementById('sortAlfa'); 
 const gender = document.getElementById('genderPerson');
-const clear = document.getElementById('btnClear').addEventListener('click', cleanFiltersChar);
+document.getElementById('btnClear').addEventListener('click', cleanFiltersChar);
 
  /////MOSTRAR PERSONAGEM NA TELA /////
   const peopleImage = document.getElementById('cardsCharacter');
@@ -45,6 +43,7 @@ showCharacter(peopleAz);
   gender.addEventListener('change', (event) => {
   const optionGenderSelected = event.target.value;
     const selectedGender = genderFilter(arrCharacters, optionGenderSelected);
+    return calculator(selectedGender, arrCharacters);
   //console.log(calculator(selectedGender, arrCharacters));
 showCharacter(selectedGender);
 });
