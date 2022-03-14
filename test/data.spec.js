@@ -1,4 +1,4 @@
-import { searchName, filterSort, movieRelease, directorFilm,
+import { searchName, filterSort, movieRelease, directorFilter,
 searchCharacter, filterSortPeople, genderFilter } from '../src/data.js';
 
 const filmsTest = [
@@ -87,10 +87,10 @@ describe('movieRelease()', () => {
   });
 });
 
-describe('directorFilm()', () => {
+describe('directorFilter()', () => {
 
   it('should be a function', () => {
-    expect(typeof directorFilm).toBe('function');
+    expect(typeof directorFilter).toBe('function');
   });
 
   it ('should return director movie', () => {
