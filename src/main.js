@@ -35,42 +35,29 @@ document.getElementById('btnClear').addEventListener('click', cleanFilters);
 //BUSCAR PELO TÍTULO DO FILME
 title.addEventListener('keyup', ( ) => {
   const typedTitle = document.querySelector('#searchTitle').value;
-  console.log(document.querySelector('#searchTitle').value);
     const selectedMovie = searchName(films, typedTitle);
-    console.log(selectedMovie);
-
   showFilms(selectedMovie);
 });
 
 //BUSCAR POR ORDEM ALFÁBETICA
 sortAz.addEventListener('change',(event)=> {
   const sortSelect = event.target.value;
-  console.log(event.target.value);
-
-  const titleAz = filterSort(films, sortSelect);
-  console.log(titleAz);
- 
+    const titleAz = filterSort(films, sortSelect);
 showFilms(titleAz);
 });
 
 // MOSTRAR FILMES POR DATA
 movieDate.addEventListener('change',(event)=> {
   const dateSelected = event.target.value;
-
-  const selectedFilmDate = movieRelease(films, dateSelected);
+    const selectedFilmDate = movieRelease(films, dateSelected);
   showFilms(selectedFilmDate);
-
 });
 
 //MOSTRAR FILMES POR DIRETOR
 directorSelect.addEventListener('change', (event) => {
   const optionSelected = event.target.value;
-  console.log(event.target.value);
-
-  const selectedFilmDirector = directorFilter(films, optionSelected);
-  console.log(selectedFilmDirector);
-
-  console.log(calculator(selectedFilmDirector, films))
+    const selectedFilmDirector = directorFilter(films, optionSelected);
+  //console.log(calculator(selectedFilmDirector, films))
 showFilms(selectedFilmDirector);
 });
 
