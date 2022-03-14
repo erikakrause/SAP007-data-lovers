@@ -1,5 +1,5 @@
 import { searchName, filterSort, movieRelease, directorFilm,
-searchCharacter, filterSortPeople, genderFilter, calculator  } from '../src/data.js';
+searchCharacter, filterSortPeople, genderFilter } from '../src/data.js';
 
 const filmsTest = [
   {
@@ -82,7 +82,7 @@ describe('movieRelease()', () => {
     expect(movieRelease(filmsTest)).toEqual([
       {"title":"Castel in the Sky", "director":"Hayao Miyazaki", "release_date": "1986", },
       {"title":"The Tale of the Princess Kaguya", "director":"Isao Takahata", "release_date": "2013", },
-      {"title":"From Up on Poppy Hill", "director":"Gorõ Miyazaki" ,"release_date": "2011", },
+      {"title":"From Up on Poppy Hill", "director":"Gorõ Miyazaki","release_date": "2011", },
       {"title":"The Secret World of Arrietty", "director":"Hirosama Yonebayash", "release_date": "2010", },]);
   });
 });
@@ -95,10 +95,10 @@ describe('directorFilm()', () => {
 
   it ('should return director movie', () => {
     expect(directorFilm(filmsTest)).toEqual([
-      {"title":"Castel in the Sky", "director":"Hayao Miyazaki", },
-      {"title":"The Tale of the Princess Kaguya", "director":"Isao Takahata", },
-      {"title":"From Up on Poppy Hill", "director":"Gorõ Miyazaki" ,},
-      {"title":"The Secret World of Arrietty", "director":"Hirosama Yonebayash",  },]);
+      {"title":"Castel in the Sky", "director":"Hayao Miyazaki", "release_date": "1986", },
+      {"title":"The Tale of the Princess Kaguya", "director":"Isao Takahata", "release_date": "2013", },
+      {"title":"From Up on Poppy Hill", "director":"Gorõ Miyazaki", "release_date": "2011",},
+      {"title":"The Secret World of Arrietty", "director":"Hirosama Yonebayash", "release_date": "2010", },]);
   });
 });
 
@@ -124,7 +124,7 @@ describe('searchCharacter()',() => {
 
   it('should return character in alphabetic order', () => {
     expect(typeof filterSortPeople(characters)).toEqual([
-      {"name": "Aiko"}, {"name": "Kiki"}, {"name":"Pazu"},{"name":"Takashi Yamada"},
+      {"name": "Aiko", "gender":"Female"}, {"name": "Kiki", "gender":"Female"}, {"name":"Pazu", "gender":"Male"}, {"name":"Takashi Yamada", "gender":"Male"}
       ]);
   });
 
