@@ -94,7 +94,7 @@ describe('directorFilter()', () => {
   });
 
   it ('should return director movie', () => {
-    expect(directorFilm(filmsTest)).toEqual([
+    expect(directorFilter(filmsTest)).toEqual([
       {"title":"Castel in the Sky", "director":"Hayao Miyazaki", "release_date": "1986", },
       {"title":"The Tale of the Princess Kaguya", "director":"Isao Takahata", "release_date": "2013", },
       {"title":"From Up on Poppy Hill", "director":"Gorõ Miyazaki", "release_date": "2011",},
@@ -135,7 +135,7 @@ describe('searchCharacter()',() => {
     });
   
     it ('should return director movie', () => {
-      expect(directorFilm(characters)).toEqual([
+      expect(genderFilter(characters)).toEqual([
         {"name":"Aiko", "gender":"Female", },
         {"name":"Kiki", "gender":"Female", },
         {"name":"Pazu", "gender": "Male", },
