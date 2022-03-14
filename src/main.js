@@ -1,4 +1,4 @@
-import {searchName, filterSort, directorFilter, movieRelease , calculator }from './data.js'
+import {searchName, filterSort, directorFilter, movieRelease , /*calculator*/ }from './data.js'
 import data from './data/ghibli/ghibli.js';
 
 const films = data.films;
@@ -57,8 +57,9 @@ movieDate.addEventListener('change',(event)=> {
 directorSelect.addEventListener('change', (event) => {
   const optionSelected = event.target.value;
     const selectedFilmDirector = directorFilter(films, optionSelected);
-    return calculator(selectedFilmDirector, films);
-  //console.log(calculator(selectedFilmDirector, films))
+  
+  //console.log(calculator(selectedFilmDirector, films)) 
+  
 showFilms(selectedFilmDirector);
 });
 
@@ -69,4 +70,4 @@ showFilms(selectedFilmDirector);
    sortAz.value ="";
    movieDate.value = "";
    directorSelect.value ="";
- };
+ }

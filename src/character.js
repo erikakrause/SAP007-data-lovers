@@ -1,4 +1,4 @@
-import { searchCharacter, filterSortPeople, genderFilter, calculator }from './data.js'
+import { searchCharacter, filterSortPeople, genderFilter, /*calculator*/ }from './data.js'
 import data from './data/ghibli/ghibli.js';
 
 //////*SELETORES*/////
@@ -43,7 +43,6 @@ showCharacter(peopleAz);
   gender.addEventListener('change', (event) => {
   const optionGenderSelected = event.target.value;
     const selectedGender = genderFilter(arrCharacters, optionGenderSelected);
-    return calculator(selectedGender, arrCharacters);
   //console.log(calculator(selectedGender, arrCharacters));
 showCharacter(selectedGender);
 });
@@ -55,4 +54,4 @@ namePerson.addEventListener('keypress', filterName);
    namePerson.value ="";
    peopleSortAz.value ="";
    gender.value ="";
- };
+ }
