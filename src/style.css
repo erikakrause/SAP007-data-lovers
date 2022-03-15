@@ -17,32 +17,37 @@ body {
 /*MENU*/
 .logo {
   display: block;
-  padding: 1em;
   width: 20%;
+  float:left;
 }
 
-.menu,
-li {
-  display: inline-block;
-  margin: 1em;
+.menu  {
+  padding: 1em;
+}
+
+.nav-list li {
+  display: inline-flex;
   list-style-type: none;
-  font-size: 1.1em;
-}
-
-.link {
+  padding: 3em;
+  margin: 2em;
+  justify-content: space-evenly;
+  font-size: 1.2em;
   color: white;
   font-weight: bold;
-  font-size: 0.8em;
+  text-transform: uppercase;
+}
+ 
+/*FILTROS FILMES*/
+
+.container {
+  position: relative;
 }
 
-/*FILTROS FILMES*/
 .filterMovies,
 .filterCharacter {
   display: flex;
-  padding: 0.6em;
   border-radius: 0.8em;
   justify-content: space-around;
-  background-color: #731f35;
 }
 
 .searchTitle,
@@ -51,6 +56,7 @@ li {
 .releaseDate,
 .director,
 .genderPerson {
+  width: 200px;
   border-radius: 1em;
   padding: 0.7em;
   text-align: center;
@@ -77,12 +83,14 @@ li {
   flex-direction: row;
   grid-gap: 5em;
   padding: 2em;
+  object-fit: fill; 
 }
 
 .img-card {
   box-shadow: 10px 10px 10px 0 #000000;
   padding: 1.5em;
   background-color: #731f35;
+  width:300px;
 }
 
 .title-card,

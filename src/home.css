@@ -15,14 +15,15 @@ body {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  padding: 1em;
   width: 20%;
+  padding: 1em;
 }
 
 .container {
   display: flex;
   justify-content: space-evenly;
 }
+
 .banner {
   width: 50%;
   height: 20%;
@@ -30,7 +31,7 @@ body {
   border-radius: 1em;
 }
 
-section {
+.container {
   margin: 2em;
   padding: 1em;
 }
@@ -38,7 +39,7 @@ section {
 aside {
   background-color: #f2f0f0;
   width: 100%;
-  height: 80%;
+  height: 60%;
   padding: 3em;
   font-size: 1em;
   line-height: 1.5em;
