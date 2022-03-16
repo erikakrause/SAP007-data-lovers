@@ -1,16 +1,10 @@
-import {searchName, filterSort, directorFilter, movieRelease , /*calculator*/ }from './data.js'
+import {searchName, filterSort, directorFilter, movieRelease , calculator }from './data.js'
 import data from './data/ghibli/ghibli.js';
 
 const films = data.films;
 
 //MOSTRAR FILMES NA TELA
-/*   <div class="back-card">
-      <p class="name-director">${item.director}</p>
-      <p class="name-producer">${item.producer}</p>
-      <p class="title-card">${item.release_date}</p>
-      <p class="title-card">${item.rt_score}</p>
-    <div>
-    </</div>*/
+
 function showFilms(data){
   document.getElementById('cards').innerHTML = data.map((item) => `
 
@@ -18,10 +12,18 @@ function showFilms(data){
     <div class="flip-card">
       <p class="title-card"><strong>${item.title}</strong></p>
       <img  class='img-card' src='${item.poster}'alt="poster filmes"> 
-      </div>
+    </div>
   </div>
+ 
 `).join('');  
 }
+ /*
+  <div class="info-card">
+    <p class="name-director">${item.director}</p>
+    <p class="name-producer">${item.producer}</p>
+    <p class="title-card">${item.release_date}</p>
+    <p class="title-card">${item.rt_score}</p
+  </div>*/
 
 showFilms(data.films);
 
@@ -30,6 +32,7 @@ const sortAz = document.getElementById('sortAlfa');
 const title = document.getElementById('searchTitle');
 const movieDate = document.getElementById('releaseDate');
 const directorSelect = document.getElementById('director');
+const directorPercent =document.getElementById('addedValue1');
 document.getElementById('btnClear').addEventListener('click', cleanFilters);
 
 //BUSCAR PELO TÍTULO DO FILME
@@ -57,11 +60,16 @@ movieDate.addEventListener('change',(event)=> {
 directorSelect.addEventListener('change', (event) => {
   const optionSelected = event.target.value;
     const selectedFilmDirector = directorFilter(films, optionSelected);
-  
-  //console.log(calculator(selectedFilmDirector, films)) 
-  
+      const percentDirector = calculator(films, optionSelected);
+
 showFilms(selectedFilmDirector);
+showPercentage(percentDirector);
 });
+
+///IMPRIMIR PORCENTAGEM NA TELA////////
+function showPercentage(films) {
+  directorPercent.innerHTML = ` ${films} está é a porcentagem de filmes por diretor.`
+}
 
 //LIMPAR CAMPOS PARA RECOMEÇAR A PESQUISA
  function cleanFilters () {

@@ -6,7 +6,7 @@ data.filter(item => item.title.toUpperCase().includes(animantion.toUpperCase()))
 export const filterSort = (data, title) => {
   const newArrFilms = [...data]
   if(title === "a-z") {
-    return newArrFilms.sort((a, b) => (a.title > b.title ? 1 : -1));
+    return newArrFilms.sort((a, b) => (a.title > b.title ? 1 : -1)); 
 } else {
   return newArrFilms.sort((a, b) => (a.title > b.title ? -1 : 1));
   }
@@ -28,11 +28,11 @@ character.filter(films => films.name.toUpperCase().includes(characterSelected.to
 
 ///FILTRO ORDEM ALFABÉTICA PERSONAGEM///
 export const filterSortPeople = (data, name) => {
-  const newArrChar = [...data]
-  if(name === "a-z") {
-    return newArrChar.sort((a, b) => (a.name > b.name ? 1 : -1));
+  const newArrChar = [...data]  
+  if(name === "a-z") { 
+    return newArrChar.sort((a, b) => (a.name > b.name ? 1 : -1)); 
 } else {
-  return newArrChar.sort((a, b) => (a.name > b.name ? -1 : 1));
+  return newArrChar.sort((a, b) => (a.name > b.name ? -1 : 1)); 
   }
 }
 

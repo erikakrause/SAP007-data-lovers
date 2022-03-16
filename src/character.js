@@ -1,10 +1,11 @@
-import { searchCharacter, filterSortPeople, genderFilter, /*calculator*/ }from './data.js'
+import { searchCharacter, filterSortPeople, genderFilter, calculator }from './data.js'
 import data from './data/ghibli/ghibli.js';
 
 //////*SELETORES*/////
 const namePerson= document.getElementById('searchPeople');
 const peopleSortAz = document.getElementById('sortAlfa'); 
 const gender = document.getElementById('genderPerson');
+const genderPercent = document.getElementById('addedValue2');
 document.getElementById('btnClear').addEventListener('click', cleanFiltersChar);
 
  /////MOSTRAR PERSONAGEM NA TELA /////
@@ -43,11 +44,16 @@ showCharacter(peopleAz);
   gender.addEventListener('change', (event) => {
   const optionGenderSelected = event.target.value;
     const selectedGender = genderFilter(arrCharacters, optionGenderSelected);
-  //console.log(calculator(selectedGender, arrCharacters));
+      const percentGender = calculator(arrCharacters, optionGenderSelected)
+
 showCharacter(selectedGender);
+showPercentageChar(percentGender);
 });
 namePerson.addEventListener('keypress', filterName);
 
+////PORCENTAGEM PERSONAGEM//////
+function showPercentageChar(films) {
+  genderPercent.innerHTML = `${films} está é a porcentagem pelo gênero selecionado.`}
 ///LIMPAR CAMPOS PARA RECOMEÇAR A PESQUISA///
  function cleanFiltersChar () {
   showCharacter(arrCharacters);
