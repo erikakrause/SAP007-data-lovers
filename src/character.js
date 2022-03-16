@@ -14,11 +14,17 @@ document.getElementById('btnClear').addEventListener('click', cleanFiltersChar);
     peopleImage.innerHTML = arrPeople.map((item) =>
      `
     <div class="card">
-      <div class="flip-card">
+      <div class="poster-card">
         <p class="name-card"><strong>${item.name}</strong></p>
         <img  class='img-card' src='${item.img}'alt="poster filmes"> 
       </div>
+    <div class="poster-details">
+    <p class="info">${item.gender}</p>
+    <p class="info">Diretor:${item.age}</p>
+    <p class="info">Produtor: ${item.specie}</p>
     </div>
+    </div>
+   </div>
 `).join('');
 }
 const characters = data.films.map(arrPeople => arrPeople.people)
