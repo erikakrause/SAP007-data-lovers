@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;700&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="img/fav.jpg" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+  <title>Filmes - Ghibli Lovers</title>
+</head>
+
+<body>
+  <header>
+    <div class="menu">
+      <img class="logo" src="img/studio_ghibli_logo.png" alt="Logo Studios Ghibli">
+      <nav>
+        <ul class="nav-list">
+          <li><a href="index.html">Início</a></li>
+          <li><a href="character.html">Personagens</a></li>
+          <li><a href="https://www.ghibli.jp/" target="_blank">Página Oficial</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main class="container">
+    <section class="filterMovies">
+      <div class="search">
+        <input id="searchTitle" class="searchTitle" type="search" name="" placeholder="Procurar por título">
+      </div>
+      <div>
+        <select id="sortAlfa" class="sortAlfa">
+          <option value disabled selected> Ordem Alfábetica</option>
+          <option value="a-z">A - Z</option>
+          <option value="z-a">Z - A</option>
+        </select>
+      </div>
+      <div>
+        <select id="releaseDate" class="releaseDate">
+          <option value disabled selected>Ano de Lançamento</option>
+          <option value="1986">1986</option>
+          <option value="1988">1988</option>
+          <option value="1989">1989</option>
+          <option value="1991">1991</option>
+          <option value="1992">1992</option>
+          <option value="1994">1994</option>
+          <option value="1995">1995</option>
+          <option value="1997">1997</option>
+          <option value="1999">1999</option>
+          <option value="2001">2001</option>
+          <option value="2002">2002</option>
+          <option value="2004">2004</option>
+          <option value="2006">2006</option>
+          <option value="2008">2008</option>
+          <option value="2010">2010</option>
+          <option value="2011">2011</option>
+          <option value="2013">2013</option>
+          <option value="2014">2014</option>
+        </select>
+      </div>
+      <div>
+        <select id="director" class="director">
+          <option value disabled selected> Diretor</option>
+          <option value="Hayao Miyazaki">Hayao Miyazaki</option>
+          <option value="Isao Takahata">Isao Takahata</option>
+          <option value="Yoshifumi Kondō">Yoshifumi Kondō</option>
+          <option value="Hiroyuki Morita">Hiroyuki Morita</option>
+          <option value="Gorō Miyazaki">Gorō Miyazaki</option>
+          <option value="Hiromasa Yonebayash">Hiromasa Yonebayash</option>
+        </select>
+      </div>
+      <div class="clear">
+        <button class="btnClear" id="btnClear" type="">Limpar</button>
+      </div>
+    </section>
+    <div class="addedValue1" id="addedValue1"></div>
+    <div class="cards" id="cards"></div>
+  </main>
+  <footer>
+    <p class="github">Desenvolvido por <a href="https://github.com/erikakrause" target="_blank">Érika Moreno</a> <br>
+      SAP007 - <a href="https://www.laboratoria.la/br" target="_blank">LABORATÓRIA</a></p>
+  </footer>
+</body>
+
+<script src="main.js" type="module"></script>
+
+</html>

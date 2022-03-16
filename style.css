@@ -1,0 +1,124 @@
+/*RESET*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+/* PÁGINA FILMES */
+body {
+  background-color: #bf9a78;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  font-family: Poppins;
+}
+
+/*MENU*/
+.logo {
+  display: block;
+  width: 20%;
+  float:left;
+}
+
+.menu  {
+  padding: 1em;
+}
+
+.nav-list li {
+  display: inline-flex;
+  list-style-type: none;
+  padding: 3em;
+  margin: 2em;
+  justify-content: space-evenly;
+  font-size: 1.2em;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+ 
+/*FILTROS FILMES*/
+
+.container {
+  position: relative;
+}
+
+.filterMovies,
+.filterCharacter {
+  display: flex;
+  border-radius: 0.8em;
+  justify-content: space-around;
+}
+
+.searchTitle,
+.searchPeople,
+.sortAlfa,
+.releaseDate,
+.director,
+.genderPerson {
+  width: 200px;
+  border-radius: 1em;
+  padding: 0.7em;
+  text-align: center;
+  border: solid 2px;
+}
+
+.searchButton,
+.btnClear {
+  background-color: #4f731a;
+  width: 9em;
+  height: 3em;
+  color: white;
+  border-radius: 0.8em;
+  border: 2px solid black;
+}
+
+/*POSTER FILMES - FRENTE*/
+.cards,
+.cardsCharacter {
+  display: flex;
+  width: 98%;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  flex-direction: row;
+  grid-gap: 5em;
+  padding: 2em;
+  object-fit: fill; 
+}
+
+.img-card {
+  box-shadow: 10px 10px 10px 0 #000000;
+  padding: 1.5em;
+  background-color: #731f35;
+  width:300px;
+}
+
+.title-card,
+.name-card {
+  font-size: 0.9em;
+  text-align: center;
+  padding: 0.8em;
+  color: white;
+}
+
+/*BACK CARD*/
+
+/*FOOTER*/
+footer {
+  background-color: #731f35;
+  height: 5em;
+  align-items: center;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.github {
+  text-align: center;
+  padding: 1.3em;
+  font-weight: bold;
+  line-height: 1.2em;
+}
