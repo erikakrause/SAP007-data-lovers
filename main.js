@@ -9,22 +9,22 @@ function showFilms(data){
   document.getElementById('cards').innerHTML = data.map((item) => `
 
   <div class="card">
-    <div class="flip-card">
-      <p class="title-card"><strong>${item.title}</strong></p>
-      <img  class='img-card' src='${item.poster}'alt="poster filmes"> 
+    <div class="poster-card">
+    <p class="title-card"><strong>${item.title}</strong></p>
+    <img  class='img-card' src='${item.poster}'alt="poster filmes"> 
+    </div>
+    <div class="poster-details">
+    <p class="info">${item.description}</p>
+    <p class="info">Diretor:${item.director}</p>
+    <p class="info">Produtor: ${item.producer}</p>
+    <p class="info">Data de Lançamento ${item.release_date}</p>
+    <p class="info">Score: ${item.rt_score}</p>
+    </div>
     </div>
   </div>
  
 `).join('');  
 }
- /*
-  <div class="info-card">
-    <p class="name-director">${item.director}</p>
-    <p class="name-producer">${item.producer}</p>
-    <p class="title-card">${item.release_date}</p>
-    <p class="title-card">${item.rt_score}</p
-  </div>*/
-
 showFilms(data.films);
 
 //SELETORES
