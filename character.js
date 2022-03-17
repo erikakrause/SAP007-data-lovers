@@ -13,15 +13,15 @@ document.getElementById('btnClear').addEventListener('click', cleanFiltersChar);
   function showCharacter(arrPeople) {    
     peopleImage.innerHTML = arrPeople.map((item) =>
      `
-    <div class="card">
+    <div class="cardChar">
       <div class="poster-card">
         <p class="name-card"><strong>${item.name}</strong></p>
-        <img  class='img-card' src='${item.img}'alt="poster filmes"> 
+        <img  class='img-card-people' src='${item.img}'alt="poster filmes"> 
       </div>
     <div class="poster-details">
-    <p class="info">${item.gender}</p>
-    <p class="info">Diretor:${item.age}</p>
-    <p class="info">Produtor: ${item.specie}</p>
+    <p class="info">Gênero: ${item.gender}</p>
+    <p class="info">Idade: ${item.age}</p>
+    <p class="info">Espécie: ${item.specie}</p>
     </div>
     </div>
    </div>

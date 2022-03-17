@@ -6,9 +6,9 @@ data.filter(item => item.title.toUpperCase().includes(animantion.toUpperCase()))
 export const filterSort = (data, title) => {
   const newArrFilms = [...data]
   if(title === "a-z") {
-    return newArrFilms.sort((a, b) => (a.title > b.title ? 1 : -1)); 
+    return newArrFilms.sort((a, b) => a.name.localeCompare(b.name));
 } else {
-  return newArrFilms.sort((a, b) => (a.title > b.title ? -1 : 1));
+  return newArrFilms.sort((a, b) => (a.name > b.name ? -1 : 1));
   }
 }
 
@@ -27,13 +27,11 @@ export const searchCharacter = (character, characterSelected) =>
 character.filter(films => films.name.toUpperCase().includes(characterSelected.toUpperCase()));
 
 ///FILTRO ORDEM ALFABÉTICA PERSONAGEM///
-export const filterSortPeople = (data, name) => {
+export const filterSortPeople = (data, person) => {
   const newArrChar = [...data]  
-  if(name === "a-z") { 
-    return newArrChar.sort((a, b) => (a.name > b.name ? 1 : -1)); 
-} else {
-  return newArrChar.sort((a, b) => (a.name > b.name ? -1 : 1)); 
-  }
+  if(person === "a-z") { 
+    return newArrChar.sort((a, b) => a.name.localeCompare(b.name)); 
+} 
 }
 
 ///FILTRO PELO GÊNERO///
