@@ -35,22 +35,23 @@ describe('searchName', () => {
 //PESQUISAR PELA ORDEM ALFÁBETICA//
 describe('filterSort ', () => {
   const nameMovie = [
-    {"title": "Castel in the Sky"},
     {"title": "Ponyo on the Cliff by the Sea"}, 
-    {"title": "Whisper of the Heart"}];
+    {"title": "Whisper of the Heart"},
+    {"title": "Castel in the Sky"}]
+   
   
   it('should be a function', () => {
     expect(typeof filterSort).toBe('function');
   });
 
   it('return ``', () => {
-    expect(filterSort(nameMovie, 'newArrFilms', "title", "a-z")).toEqual([
+    expect(filterSort(nameMovie, "a-z")).toEqual([
       {"title": "Castel in the Sky"}, 
       {"title": "Ponyo on the Cliff by the Sea"},
       {"title": "Whisper of the Heart"}]);
   });
   it('return ``', () => {
-    expect(filterSort(nameMovie, "title", "z-a")).toEqual([
+    expect(filterSort(nameMovie, "z-a")).toEqual([
       {"title": "Whisper of the Heart"},
       {"title": "Ponyo on the Cliff by the Sea"},
       {"title": "Castel in the Sky"}]);
@@ -105,12 +106,13 @@ describe('searchCharacter()',() => {
   });
 
   //TESTE ORDEM ALFÁBETICA NOME PERSONAGEM//
-  describe('filterSortPeople  ', () => {
+  describe('filterSortPeople', () => {
     const nameChar = [
+      {"name":"Takashi Yamada", "gender": "Male"},
       {"name": "Aiko", "gender":"Female"},
-      {"name": "Kiki", "gender":"Female"},
       {"name":"Pazu", "gender": "Male"},
-      {"name":"Takashi Yamada", "gender": "Male"}
+      {"name": "Kiki", "gender":"Female"},
+     
     ];
     
     it('should be a function', () => {
@@ -118,14 +120,14 @@ describe('searchCharacter()',() => {
     });
   
     it('return ``', () => {
-      expect(filterSort(nameChar, "title", "a-z")).toEqual([
+      expect(filterSort(nameChar, "a-z")).toEqual([
       {"name": "Aiko", "gender":"Female"},
       {"name": "Kiki", "gender":"Female"},
       {"name":"Pazu", "gender": "Male"},
       {"name":"Takashi Yamada", "gender": "Male"},]);
     });
     it('return ``', () => {
-      expect(filterSort(nameChar, "title", "z-a")).toEqual([
+      expect(filterSort(nameChar, "z-a")).toEqual([
         {"name":"Takashi Yamada", "gender": "Male"},
         {"name":"Pazu", "gender": "Male"},
         {"name": "Kiki", "gender":"Female"},
