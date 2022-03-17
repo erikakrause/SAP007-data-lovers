@@ -75,3 +75,24 @@ footer {
 }
 
 /*-- RESPONSIVO */
+/*tablet*/
+@media screen and (max-width: 768px) {
+.logo {
+  width: 50%;
+}
+.container, img, aside {
+  display: inline;
+}
+.banner, aside {
+  width: 600px;
+  height: 280px;
+  margin-left:5em;
+}
+aside {
+padding:1em;
+}
+
+.banner, aside {
+  display: flex;
+}
+}
