@@ -1,4 +1,4 @@
-import { searchCharacter, filterSortPeople, genderFilter, calculator }from './data.js'
+import { searchCharacter, filterSort, genderFilter, calculator }from './data.js'
 import data from './data/ghibli/ghibli.js';
 
 //////*SELETORES*/////
@@ -19,9 +19,9 @@ document.getElementById('btnClear').addEventListener('click', cleanFiltersChar);
         <img  class='img-card-people' src='${item.img}'alt="poster filmes"> 
       </div>
     <div class="poster-details">
-    <p class="info">Gênero: ${item.gender}</p>
-    <p class="info">Idade: ${item.age}</p>
-    <p class="info">Espécie: ${item.specie}</p>
+    <p class="info"><strong>Gender: </strong>${item.gender}</p>
+    <p class="info"><strong>Age: </strong>${item.age}</p>
+    <p class="info"><strong>Specie:</strong> ${item.specie}</p>
     </div>
     </div>
    </div>
@@ -42,7 +42,7 @@ showCharacter(arrCharacters);
 ///BUSCAR POR ORDEM ALFÁBETICA///
 peopleSortAz.addEventListener('change',(event) => {
   const sortSelectPerson = event.target.value;
-    const peopleAz = filterSortPeople(arrCharacters, sortSelectPerson);
+    const peopleAz = filterSort(arrCharacters, sortSelectPerson);
 showCharacter(peopleAz);
 });
 

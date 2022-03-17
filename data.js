@@ -26,14 +26,6 @@ export const directorFilter = (animation, selectedValue) => {
 export const searchCharacter = (character, characterSelected) => 
 character.filter(films => films.name.toUpperCase().includes(characterSelected.toUpperCase()));
 
-///FILTRO ORDEM ALFABÉTICA PERSONAGEM///
-export const filterSortPeople = (data, person) => {
-  const newArrChar = [...data]  
-  if(person === "a-z") { 
-    return newArrChar.sort((a, b) => a.name.localeCompare(b.name)); 
-} 
-}
-
 ///FILTRO PELO GÊNERO///
 export const genderFilter = (animation, selectedValue) => {
   return animation.filter(films => films.gender.includes(selectedValue));

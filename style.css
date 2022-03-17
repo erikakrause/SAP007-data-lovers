@@ -2,16 +2,14 @@
 * {
   padding: 0;
   margin: 0;
-  border: 0;
-  box-sizing: border-box;
 }
+
 /* PÁGINA FILMES */
 body {
   background-color: #bf9a78;
-  justify-content: center;
   width: 100vw;
   height: 100vh;
-  font-family: Poppins;
+  font-family: Poppins, sans-serif;
 }
 
 /*MENU*/
@@ -37,12 +35,7 @@ body {
   text-transform: uppercase;
 }
  
-/*FILTROS FILMES*/
-
-.container {
-  position: relative;
-}
-
+/*INPUT FILTROS*/
 .filterMovies,
 .filterCharacter {
   display: flex;
@@ -63,7 +56,6 @@ body {
   border: solid 2px;
 }
 
-.searchButton,
 .btnClear {
   background-color: #4f731a;
   width: 9em;
@@ -73,16 +65,18 @@ body {
   border: 2px solid black;
 }
 
-/*POSTER FILMES - FRENTE*/
+/*CARDS*/
 .cards,
 .cardsCharacter {
   display: flex;
   width: 80%;
-  justify-content: space-around;
+  justify-content: center;
   flex-direction: column;
   align-items: center;
   padding: 2em;
+  margin: 2em;
 }
+
 .card {
   background-color: #731f35;
   box-shadow: 10px 10px 10px 0 #000000;
@@ -98,7 +92,7 @@ body {
   box-shadow: 10px 10px 10px 0 #000000;
   padding: 1.5em;
   box-sizing: border-box;
-  width: 50%;
+  width: 70%;
   margin-left: 3em;
   margin-bottom: 2em;
   display: flex;
@@ -111,16 +105,17 @@ body {
 }
 
 .img-card-people {
-  width:200x;
+  width:250px;
   border-radius: 3%;
+  margin-top: 2em;
   box-shadow: 10px 10px 10px 0 #000000;
 }
 .poster-details {
-  display: flex;
-  flex-direction: column;
-  padding: 5em;
+  margin-top: 5em;
+  display:block;
+  padding: 4em;
   color: white;
-  align-items: justify;
+  font-size: 1em;
 }
 
 .title-card,
@@ -130,8 +125,6 @@ body {
   padding: 0.8em;
   color: white;
 }
-
-/*BACK CARD*/
 
 /*FOOTER*/
 footer {
