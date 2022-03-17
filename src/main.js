@@ -1,4 +1,4 @@
-import {searchName, filterSort, directorFilter, movieRelease , calculator }from './data.js'
+import {searchName, /*filterSort*/ directorFilter, movieRelease , calculator }from './data.js'
 import data from './data/ghibli/ghibli.js';
 
 const films = data.films;
@@ -14,11 +14,11 @@ function showFilms(data){
     <img  class='img-card' src='${item.poster}'alt="poster filmes"> 
     </div>
     <div class="poster-details">
-    <p class="info">${item.description}</p>
-    <p class="info">Diretor:${item.director}</p>
-    <p class="info">Produtor: ${item.producer}</p>
-    <p class="info">Data de Lançamento ${item.release_date}</p>
-    <p class="info">Score: ${item.rt_score}</p>
+    <p class="info">${item.description}</p><br>
+    <p class="info"><strong>Director: </strong>${item.director}</p>
+    <p class="info"><strong>Producer: </strong>${item.producer}</p>
+    <p class="info"><strong>Release date: </strong>${item.release_date}</p>
+    <p class="info"><strong>Score: </strong>${item.rt_score}</p>
     </div>
     </div>
   </div>
@@ -41,13 +41,13 @@ title.addEventListener('keyup', ( ) => {
     const selectedMovie = searchName(films, typedTitle);
   showFilms(selectedMovie);
 });
-
+/*
 //BUSCAR POR ORDEM ALFÁBETICA
 sortAz.addEventListener('change',(event)=> {
   const sortSelect = event.target.value;
     const titleAz = filterSort(films, sortSelect);
 showFilms(titleAz);
-});
+});*/
 
 // MOSTRAR FILMES POR DATA
 movieDate.addEventListener('change',(event)=> {
