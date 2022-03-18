@@ -14,7 +14,7 @@ function showFilms(data){
     <img  class='img-card' src='${item.poster}'alt="poster filmes"> 
     </div>
     <div class="poster-details">
-    <p class="info">${item.description}</p><br>
+    <p class="description">${item.description}</p><br>
     <p class="info"><strong>Director: </strong>${item.director}</p>
     <p class="info"><strong>Producer: </strong>${item.producer}</p>
     <p class="info"><strong>Release date: </strong>${item.release_date}</p>
@@ -63,12 +63,12 @@ directorSelect.addEventListener('change', (event) => {
       const percentDirector = calculator(films, optionSelected);
 
 showFilms(selectedFilmDirector);
-showPercentage(percentDirector);
+showPercentage(parseFloat(percentDirector));
 });
 
 ///IMPRIMIR PORCENTAGEM NA TELA////////
 function showPercentage(films) {
-  directorPercent.innerHTML = ` ${films} está é a porcentagem de filmes por diretor.`
+  directorPercent.innerHTML = ` ${films} está é a porcentagem de filmes por diretor selecionado.`
 }
 
 //LIMPAR CAMPOS PARA RECOMEÇAR A PESQUISA

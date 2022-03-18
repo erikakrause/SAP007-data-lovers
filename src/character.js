@@ -15,7 +15,7 @@ document.getElementById('btnClear').addEventListener('click', cleanFiltersChar);
      `
     <div class="cardChar">
       <div class="poster-card">
-        <p class="name-card"><strong>${item.name}</strong></p>
+        <p class="title-card"><strong>${item.name}</strong></p>
         <img  class='img-card-people' src='${item.img}'alt="poster filmes"> 
       </div>
     <div class="poster-details">
@@ -53,13 +53,15 @@ showCharacter(peopleAz);
       const percentGender = calculator(arrCharacters, optionGenderSelected)
 
 showCharacter(selectedGender);
-showPercentageChar(percentGender);
+showPercentageChar(parseFloat(percentGender));
 });
 namePerson.addEventListener('keypress', filterName);
 
 ////PORCENTAGEM PERSONAGEM//////
 function showPercentageChar(films) {
   genderPercent.innerHTML = `${films} está é a porcentagem pelo gênero selecionado.`}
+
+
 ///LIMPAR CAMPOS PARA RECOMEÇAR A PESQUISA///
  function cleanFiltersChar () {
   showCharacter(arrCharacters);

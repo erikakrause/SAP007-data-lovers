@@ -33,5 +33,5 @@ export const genderFilter = (animation, selectedValue) => {
 
 ///PORCENTAGEM CÁLCULO AGREGADO/// 
 export const calculator = (filterArrFilm, data) => {
-  return filterArrFilm.length * 100/data.length;
+  return filterArrFilm.length * 0.10/data.length;
 }
