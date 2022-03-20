@@ -19,17 +19,17 @@ document.getElementById('btnClear').addEventListener('click', cleanFiltersChar);
         <img  class='img-card-people' src='${item.img}'alt="poster filmes"> 
       </div>
     <div class="poster-details">
-    <p class="info"><strong>Gender: </strong>${item.gender}</p>
-    <p class="info"><strong>Age: </strong>${item.age}</p>
-    <p class="info"><strong>Specie:</strong> ${item.specie}</p>
+      <p class="info"><strong>Gender: </strong>${item.gender}</p>
+      <p class="info"><strong>Age: </strong>${item.age}</p>
+      <p class="info"><strong>Specie:</strong> ${item.specie}</p>
     </div>
     </div>
    </div>
 `).join('');
 }
-const characters = data.films.map(arrPeople => arrPeople.people)
-const arrCharacters = [].concat.apply([], characters);
 
+const characters = data.films.map(arrPeople => arrPeople.people)
+  const arrCharacters = [].concat.apply([], characters);
 showCharacter(arrCharacters);
 
 ///BUSCAR PELO NOME DO PERSONAGEM ///
@@ -38,11 +38,11 @@ showCharacter(arrCharacters);
      const selectedCharacter = searchCharacter(arrCharacters, typedName); 
     showCharacter(selectedCharacter);
   };
-  
+    
 ///BUSCAR POR ORDEM ALFÁBETICA///
 peopleSortAz.addEventListener('change',(event) => {
   const sortSelectPerson = event.target.value;
-    const peopleAz = filterSort(arrCharacters, sortSelectPerson);
+    const peopleAz = filterSort(arrCharacters,'name',  sortSelectPerson);
 showCharacter(peopleAz);
 });
 

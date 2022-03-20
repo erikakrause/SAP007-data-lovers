@@ -1,4 +1,4 @@
-import {searchName, /*filterSort*/ directorFilter, movieRelease , calculator }from './data.js'
+import {searchName, filterSort, directorFilter, movieRelease , calculator }from './data.js'
 import data from './data/ghibli/ghibli.js';
 
 const films = data.films;
@@ -41,13 +41,13 @@ title.addEventListener('keyup', ( ) => {
     const selectedMovie = searchName(films, typedTitle);
   showFilms(selectedMovie);
 });
-/*
+
 //BUSCAR POR ORDEM ALFÁBETICA
 sortAz.addEventListener('change',(event)=> {
   const sortSelect = event.target.value;
-    const titleAz = filterSort(films, sortSelect);
+    const titleAz = filterSort(films, 'title', sortSelect);
 showFilms(titleAz);
-});*/
+});
 
 // MOSTRAR FILMES POR DATA
 movieDate.addEventListener('change',(event)=> {

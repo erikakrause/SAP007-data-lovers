@@ -1,5 +1,5 @@
 import { searchName, filterSort, movieRelease, directorFilter,
-searchCharacter, filterSortPeople, genderFilter, calculator } from '../src/data.js';
+searchCharacter, genderFilter, calculator } from '../src/data.js';
 
 const filmsTest = [
   {"title":"Castel in the Sky", "director":"Hayao Miyazaki","release_date": "1986"},
@@ -34,6 +34,12 @@ describe('searchName', () => {
 
 //PESQUISAR PELA ORDEM ALFÁBETICA//
 describe('filterSort ', () => {
+  const nameChar = [
+    {"name": "Aiko", "gender": "Female"},
+    {"name": "Kiki", "gender": "Female"},
+    {"name": "Pazu", "gender": "Male"},
+    {"name": "Takashi Yamada", "gender": "Male"}
+  ]
   const nameMovie = [
     {"title": "Ponyo on the Cliff by the Sea"}, 
     {"title": "Whisper of the Heart"},
@@ -45,16 +51,24 @@ describe('filterSort ', () => {
   });
 
   it('return ``', () => {
-    expect(filterSort(nameMovie, "a-z")).toEqual([
+    expect(filterSort(nameMovie, nameChar, "a-z")).toEqual([
       {"title": "Castel in the Sky"}, 
       {"title": "Ponyo on the Cliff by the Sea"},
-      {"title": "Whisper of the Heart"}]);
+      {"title": "Whisper of the Heart"},
+      {"name": "Aiko", "gender": "Female"},
+      {"name": "Kiki", "gender": "Female"},
+      {"name": "Pazu", "gender": "Male"},
+      {"name": "Takashi Yamada", "gender": "Male"}]);
   });
   it('return ``', () => {
-    expect(filterSort(nameMovie, "z-a")).toEqual([
+    expect(filterSort(nameMovie, nameChar, "z-a")).toEqual([
       {"title": "Whisper of the Heart"},
       {"title": "Ponyo on the Cliff by the Sea"},
-      {"title": "Castel in the Sky"}]);
+      {"title": "Castel in the Sky"},
+      {"name": "Pazu", "gender": "Male"},
+      {"name": "Kiki", "gender": "Female"},
+      {"name": "Takashi Yamada", "gender": "Male"},
+      {"name": "Aiki", "gender": "Female"}]);
   });
 });
 
@@ -104,36 +118,6 @@ describe('searchCharacter()',() => {
       {"name":"Takashi Yamada", "gender": "Male"},
     ]);
   });
-
-  //TESTE ORDEM ALFÁBETICA NOME PERSONAGEM//
-  describe('filterSortPeople', () => {
-    const nameChar = [
-      {"name":"Takashi Yamada", "gender": "Male"},
-      {"name": "Aiko", "gender":"Female"},
-      {"name":"Pazu", "gender": "Male"},
-      {"name": "Kiki", "gender":"Female"},
-     
-    ];
-    
-    it('should be a function', () => {
-      expect(typeof filterSortPeople).toBe('function');
-    });
-  
-    it('return ``', () => {
-      expect(filterSort(nameChar, "a-z")).toEqual([
-      {"name": "Aiko", "gender":"Female"},
-      {"name": "Kiki", "gender":"Female"},
-      {"name":"Pazu", "gender": "Male"},
-      {"name":"Takashi Yamada", "gender": "Male"},]);
-    });
-    it('return ``', () => {
-      expect(filterSort(nameChar, "z-a")).toEqual([
-        {"name":"Takashi Yamada", "gender": "Male"},
-        {"name":"Pazu", "gender": "Male"},
-        {"name": "Kiki", "gender":"Female"},
-        {"name": "Aiko", "gender":"Female"}]);
-      });
-    });
 
   //TESTE FILTRO GÊNERO//
   describe('genderFilter()', () => {
