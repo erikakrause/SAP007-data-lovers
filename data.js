@@ -3,13 +3,13 @@ export const searchName = (data, animantion) =>
 data.filter(item => item.title.toUpperCase().includes(animantion.toUpperCase()))
 
 ///FILTRO PARA BUSCAR O FILME POR ORDEM ALFABÉTICA///
-export const filterSort = (data, title) => {
-  const newArrFilms = [...data]
+export const filterSort = (data, key, title) => {
+  const newArr = [...data]
   if(title === "a-z") {
-    return newArrFilms.sort((a, b) => a.name.localeCompare(b.name));
-} else {
-  return newArrFilms.sort((a, b) => (a.name > b.name ? -1 : 1));
-  }
+    return newArr.sort((a, b) => a[key].localeCompare(b[key]));
+} else  {
+  return newArr.reverse();
+}
 }
 
 ///FILTRO ANO DE LANÇAMENTO FILME///
