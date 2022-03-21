@@ -42,7 +42,7 @@ showCharacter(arrCharacters);
 ///BUSCAR POR ORDEM ALFÁBETICA///
 peopleSortAz.addEventListener('change',(event) => {
   const sortSelectPerson = event.target.value;
-    const peopleAz = filterSort(arrCharacters,'name',  sortSelectPerson);
+    const peopleAz = filterSort(arrCharacters,'name',   sortSelectPerson);
 showCharacter(peopleAz);
 });
 
