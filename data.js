@@ -5,11 +5,14 @@ data.filter(item => item.title.toUpperCase().includes(animantion.toUpperCase()))
 ///FILTRO PARA BUSCAR O FILME POR ORDEM ALFABÉTICA///
 export const filterSort = (data, key, title) => {
   const newArr = [...data]
+  console.log(newArr)
   if(title === "a-z") {
+    console.log('entrou')
     return newArr.sort((a, b) => a[key].localeCompare(b[key]));
-} else  {
-  return newArr.reverse();
-}
+  } else  {
+    console.log('entrou no else')
+    return newArr.reverse();  
+  }
 }
 
 ///FILTRO ANO DE LANÇAMENTO FILME///

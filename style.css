@@ -70,8 +70,7 @@ body {
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  padding: 2em;
-  margin: 2em;
+  margin: auto;
 }
 
 .card {
@@ -80,10 +79,11 @@ body {
   padding: 1.5em;
   box-sizing: border-box;
   width: 100%;
-  margin-left: 5em;
-  margin-bottom: 2em;
+  margin: auto;
+  margin-bottom: 3em;
   display: flex;
 }
+
 .cardChar {
   background-color: #731f35;
   box-shadow: 10px 10px 10px 0 #000000;
@@ -119,17 +119,18 @@ body {
 }
 
 .poster-details {
-  margin-top: 2em;
-  display: block;
-  padding: 4em;
+  margin-top: 1em;
+  display: inline;
+  padding: 3em;
   color: white;
   font-size: 1em;
+  text-align: center;
 }
 
 .addedValue {
   display: flex;
   padding: 1.5em;
-  justify-content:justify;
+  justify-content:center;
   font-weight: bold;
 }
 
@@ -170,19 +171,27 @@ a {
   nav {
     display:inline;
   }
-
+ 
   .nav-list li {
     display: inline;
-    margin-left:3em;
-    
+    margin-left:3em;   
   }
   
   .filterMovies,
   .filterCharacter  {
     display: grid;
     margin-top: 2em;
+    flex-direction: column;
   }
 
+  .searchTitle, 
+  .searchPeople,
+  .sortAlfa,
+  .releaseDate,
+  .director,
+  .genderPerson {
+    margin-top:1em;
+}
   .btnClear {
     margin-top: 1em;
     margin-left: 3em;
@@ -199,8 +208,8 @@ a {
   
   .img-card {
     width: 200px;
-    margin-left: 2em;
-    margin-top: 3em;
+    margin-left: 1.8em;
+    margin-top: 1em;
   }
 
   .img-card-people {
