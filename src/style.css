@@ -70,8 +70,7 @@ body {
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  padding: 2em 1em 1em 2em;
-  margin: 3em;
+  margin: auto;
 }
 
 .card {
@@ -80,10 +79,11 @@ body {
   padding: 1.5em;
   box-sizing: border-box;
   width: 100%;
-  margin-left: 5em;
-  margin-bottom: 2em;
+  margin: auto;
+  margin-bottom: 3em;
   display: flex;
 }
+
 .cardChar {
   background-color: #731f35;
   box-shadow: 10px 10px 10px 0 #000000;
@@ -171,19 +171,27 @@ a {
   nav {
     display:inline;
   }
-
+ 
   .nav-list li {
     display: inline;
-    margin-left:3em;
-    
+    margin-left:3em;   
   }
   
   .filterMovies,
   .filterCharacter  {
     display: grid;
     margin-top: 2em;
+    flex-direction: column;
   }
 
+  .searchTitle, 
+  .searchPeople,
+  .sortAlfa,
+  .releaseDate,
+  .director,
+  .genderPerson {
+    margin-top:1em;
+}
   .btnClear {
     margin-top: 1em;
     margin-left: 3em;
@@ -200,8 +208,8 @@ a {
   
   .img-card {
     width: 200px;
-    margin-left: 2em;
-    margin-top: 3em;
+    margin-left: 1.8em;
+    margin-top: 1em;
   }
 
   .img-card-people {
