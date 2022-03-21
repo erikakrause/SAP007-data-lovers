@@ -34,27 +34,26 @@ parte direita.
 ![json-interface](https://lh4.googleusercontent.com/Tn-RPXS26pVvOTdUzRT1KVaJ-_QbFs9SpcGLxSPE43fgbHaXtFgMUInuDt7kV41DkT1j8Tt29V0LxQW7SMtC6digOIhfTXSBKdwI08wUwhD3RAqlwy0hjfmhZ2BFe91mtmCSEqysfgk)
 
 ## 2. Resumo do projeto
-Este é o segundo projeto desenvolvido para o Bootcamp de desenvolvimento frot-end da Laboratória Brasil, e consite em desenvolver uma aplicação para que o usuário interaja, busque, filtre, ordene e mostre algum valor referente a sua pesquisa através de um banco de dados.
+Este é o segundo projeto desenvolvido para o Bootcamp de desenvolvimento frot-end da Laboratória Brasil, e consite em desenvolver uma aplicação para que o usuário interaja, busque, filtre, ordene e  mostre algum valor referente a sua pesquisa através de um banco de dados.
 
-### Definição de produto
-O Studio Ghibli é um estudio de animação japonesa conhecido mundialmente.
-Para este novo desafio optei por construir uma interação sobre o Studio Ghibli, onde o usuário poderá classificar suas pesquisa por título dos filmes, diretor,  ano de seu lançamento, nome dos personagens, gênero, porcentagem referente a produções realizadas por diretor e o gênero dos personagem.
+### 2.1 Definição de produto
+O Ghibli Lovers foi desenvolvido para os fã do estudio a fim de localizar em uma única plataforma a ficha técnica dos filmes e filtrar essas informações pelo título do filme, ano de lançamento e obter dados referentes a produção por diretor e a porcentagem das produções. Também é possível aceessar a biblioteca com informações de todos os personagens por produção.
 
-### Pesquisa de mercado
+#### 2.2 Pesquisa de mercado
 Gráficos retirados da pesquisa realizada atráves da ferramenta _Google Forms_.<br><br>
 64% dos entrevistados se declararam como mulher e estimasse que a sua faixa etária está entre 25 e +30 anos.
-- Gênero dos entrebistados:
+- Gênero dos entrevistados:
 ![gênero](./img-readme/genero.png)
 - Idade dos entrevistados:
 ![idade](./img-readme/idade.png)
 
-A partir do gráfico contendo a pesquisa sobre as informações relevantes para realizar a pesquisa em nossa aplicação, podemos extrair as principais temáticas para montar as histórias de usuários.<br>
-
+- A partir do gráfico contendo a pesquisa sobre as informações relevantes para realizar a pesquisa em nossa aplicação, podemos extrair as principais temáticas para montar as histórias de usuários.<br>
 ![info_pesquisa](./img-readme/info_site.png)
 
 ## 3. Histórias de usuário
 
 **Historia 1**
+<br>
 ![mulheres](./img-readme/mulher.png)
 
 **História 2**
@@ -62,23 +61,22 @@ A partir do gráfico contendo a pesquisa sobre as informações relevantes para 
 ![jovem](./img-readme/jovem.png)
 
 ## 4. Protótipo
-#### Protótipo de baixa fidelidade
+A paleta de cores a ser utilizada será do filme The Secret World of Arrietty, e a análise de cores foram  extraidas do banner da homepage através da ferramenta _Adobe Color_.<br>
+![paleta](./img-readme/paleta.jpg)
 
+### 4.1 Protótipo de baixa fidelidade
+Feito um rascunha no papel foi criado a idéia inicial para o projeto
 ![prototipo-baixa-fidelidade](./img-readme/home_baixa_fidelidade.jpg)
 
-#### Protótipo de alta fidelidade
+### 4.2 Protótipo de alta fidelidade
 - Homepage
 ![prototipo_home](./img-readme/home_prototipo.png)
 - Filtros e Cards (filmes e personagens)
 ![prototipo_index](./img-readme/index_prototipo.png)
 
 ## 6. Testes de usabilidade
-
-A paleta de cores a ser utilizada será do filme The Secret World of Arrietty, e a análise de cores foram  extraidas do banner da homepage através da ferramenta _Adobe Color_.<br>
-Foram feitos ajuste de layou desde o protótipo inicial para melhorar o fluxo de trabalho.
+Foram feitos ajuste de layout baseando no projeto inicial para melhorar o fluxo de trabalho.
 Inicialmente foi pensado em obter as informações relevantes dos cards através da manipulação de flip-card, mas foi optado por uma estrutura mais simples de ser visualizada pelo usuário.
-
-![paleta](./img-readme/paleta.jpg).
  
 ## 7. Considerações finais
 Neste projeto foram desenvolvidas as seguintes Atividades de Aprendizagem:
@@ -91,7 +89,7 @@ Neste projeto foram desenvolvidas as seguintes Atividades de Aprendizagem:
 - Layout Responsivo
 - Git e Github: comandos git, gerenciamento de repositório, github colarorativo (branch, pull request) 
 
-### Ferramentas utilizadas:
+### 7.1 Ferramentas utilizadas:
 - Vs Code
 - Node.js
 - Jest
