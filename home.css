@@ -19,7 +19,7 @@ body {
   padding: 1em;
 }
 
-.banner {
+.banner{
   width: 50%;
   height: 20%;
   border-radius: 1em;
@@ -77,17 +77,19 @@ footer {
 
 /*-- RESPONSIVO */
 /*tablet*/
-@media screen and (max-width: 768px) {
-.logo {
+@media screen and (max-width: 480px) {
+body {
+  flex-direction: column;
+  width: 100%;  
+}
+  .logo {
   width: 50%;
 }
 .container, img, aside {
   display: inline;
 }
 .banner, aside {
-  width: 600px;
-  height: 280px;
-  margin-left:5em;
+  width:  90%;
 }
 aside {
 padding:1em;

@@ -129,7 +129,7 @@ body {
 .addedValue {
   display: flex;
   padding: 1.5em;
-  justify-content:center;
+  justify-content:justify;
   font-weight: bold;
 }
 
@@ -155,44 +155,57 @@ a {
 
 @media screen and (max-width: 480px) {
 
+  body {
+    width: 100%;
+    height: 100%;
+  }
+
   .logo {
     width: 50%;
-    padding:1em;
+    padding:2em;
+    margin-left:5em;
+    margin-top: 2em;
   }
 
   nav {
-    display: inline-flex;
-    margin:2em;
+    display:inline;
   }
 
   .nav-list li {
-    padding: 1em;
-    float: left;
-    display: flex;
+    display: inline;
+    margin-left:3em;
+    
+  }
+  
+  .filterMovies,
+  .filterCharacter  {
+    display: grid;
+    margin-top: 2em;
   }
 
-  .filterMovies,
-  .filterCharacter {
-    display: inline;
+  .btnClear {
+    margin-top: 1em;
+    margin-left: 3em;
   }
 
   .card,
   .cardChar {
     width:100%;
     margin-left: 2em;
+    margin-right: 3em;
     margin-bottom: 2em;
-    display: inline;
+    display:inline;
   }
-
+  
   .img-card {
     width: 200px;
-    margin-left: 10.8em;
+    margin-left: 2em;
     margin-top: 3em;
   }
 
   .img-card-people {
     width: 180px;
-    margin-left:10.8em;
+    margin-left:2em;
     margin-top: 2em;
   }
   .title-card {
