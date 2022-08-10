@@ -60,6 +60,7 @@ body {
   color: white;
   border-radius: 0.8em;
   border: 2px solid black;
+  cursor: pointer;
 }
 
 /*CARDS*/
@@ -229,6 +230,5 @@ a {
   .info {
     text-align: center;
   }
-
 }
 
